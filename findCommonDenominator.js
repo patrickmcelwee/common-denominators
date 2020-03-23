@@ -2,12 +2,11 @@ const finder = (x, y) => {
   if (x === y) {
     return x;
   }
-  if ((x * 2) === y) {
+
+  if ((y % x) === 0) {
     return y;
   }
-  if ((x * 3) === y) {
-    return y;
-  }
+
   return x * y;
 };
 

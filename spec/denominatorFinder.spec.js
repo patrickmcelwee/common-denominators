@@ -48,4 +48,10 @@ describe('findCommonDenominator', () => {
       findCommonDenominator(2, 6)
     ).toEqual(6);
   });
+
+  it('works for 2 and 8 ', () => {
+    expect(
+      findCommonDenominator(2, 8)
+    ).toEqual(8);
+  });
 });
