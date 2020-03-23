@@ -1,6 +1,7 @@
 const recursiveFinder = (originalX, originalY, currentX, currentY) => {
   //  If they are equal, we already have our answer!
   if (currentX === currentY) { return currentX };
+
   // one is a multiple of the other :-)
   if ((currentY % currentX) === 0) {
     return currentY;
@@ -22,8 +23,12 @@ const finder = (x, y) => {
   return recursiveFinder(x, y, x, y);
 };
 
-const findCommonDenominator = (x, y) => finder(...[x, y].sort(
-  (a, b) => {return a - b}
-))
+const findCommonDenominator = (...denominators) => {
+  return denominators.reduce((previous, current) => {
+    return finder(...[previous, current].sort(
+      (a, b) => {return a - b}
+    ));
+  })
+}
 
 module.exports = findCommonDenominator;

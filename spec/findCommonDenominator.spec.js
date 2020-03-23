@@ -60,4 +60,16 @@ describe('findCommonDenominator', () => {
       findCommonDenominator(15, 10)
     ).toEqual(30);
   });
+
+  it('works for 6, 3, 9', () => {
+    expect(
+      findCommonDenominator(6, 3, 9)
+    ).toEqual(18);
+  });
+
+  it('performs reasonably for big number', () => {
+    expect(
+      findCommonDenominator(10000000000000000000000, 2)
+    ).toEqual(10000000000000000000000);
+  });
 });
