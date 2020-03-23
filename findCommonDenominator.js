@@ -5,6 +5,9 @@ const finder = (x, y) => {
   if ((x * 2) === y) {
     return y;
   }
+  if ((x * 3) === y) {
+    return y;
+  }
   return x * y;
 };
 
